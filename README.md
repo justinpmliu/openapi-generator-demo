@@ -18,9 +18,9 @@ http://localhost:8080/
 Change default port value in application.properties
 
 ## Generate code
-Generate source code to target/generated-sources/openapi: 
-mvn clean generate-sources -P code-gen
+Generate source code to target/generated-sources/openapi:  
+*mvn clean generate-sources -P code-gen*
 
 ## Compile code
-Compile the source code under ${project.basedir}/src/main/java: 
-mvn clean compile
+Compile the source code under ${project.basedir}/src/main/java:  
+*mvn clean compile*
