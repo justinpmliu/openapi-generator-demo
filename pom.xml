@@ -104,9 +104,9 @@
         </dependency>
     </dependencies>
 
-	<build>
-		<sourceDirectory>src/main/java</sourceDirectory>
-	</build>
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+    </build>
 
     <profiles>
         <profile>
