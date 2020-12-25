@@ -14,7 +14,6 @@ import java.util.Objects;
 /**
  * Pet
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2020-12-23T12:40:00.255+08:00[Asia/Shanghai]")
 
 public class Pet   {
   @JsonProperty("id")

@@ -1,12 +1,12 @@
 package com.example.openapigeneratordemo.controller;
 
+import com.example.openapigeneratordemo.model.Pet;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
 
 import java.util.Optional;
-
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2020-12-23T12:40:00.255+08:00[Asia/Shanghai]")
 
 @Controller
 @RequestMapping("${openapi.swaggerPetstore.base-path:/v2}")
@@ -22,6 +22,14 @@ public class PetApiController implements PetApi {
     @Override
     public Optional<NativeWebRequest> getRequest() {
         return Optional.ofNullable(request);
+    }
+
+    @Override
+    public ResponseEntity<Pet> getPetById(Long petId) {
+        Pet pet = new Pet();
+        pet.setId(1L);
+        pet.setName("White Cat");
+        return ResponseEntity.ok(pet);
     }
 
 }

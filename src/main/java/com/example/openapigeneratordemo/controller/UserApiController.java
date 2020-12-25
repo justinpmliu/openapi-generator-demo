@@ -6,8 +6,6 @@ import org.springframework.web.context.request.NativeWebRequest;
 
 import java.util.Optional;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2020-12-23T12:40:00.255+08:00[Asia/Shanghai]")
-
 @Controller
 @RequestMapping("${openapi.swaggerPetstore.base-path:/v2}")
 public class UserApiController implements UserApi {

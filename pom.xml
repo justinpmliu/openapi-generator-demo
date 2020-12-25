@@ -93,10 +93,6 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <sourceDirectory>src/main/java</sourceDirectory>
-    </build>
-
     <profiles>
         <profile>
             <id>code-gen</id>
@@ -112,10 +108,20 @@
                                     <goal>generate</goal>
                                 </goals>
                                 <configuration>
-                                    <inputSpec>${project.basedir}/src/main/resources/spec/api.yaml</inputSpec>
+                                    <ignoreFileOverride>${basedir}/.openapi-generator-ignore</ignoreFileOverride>
+                                    <inputSpec>${basedir}/src/main/resources/spec/api.yaml</inputSpec>
                                     <generatorName>spring</generatorName>
-                                    <apiPackage>${default.package}.controller</apiPackage>
-                                    <modelPackage>${default.package}.model</modelPackage>
+                                    <configOptions>
+                                        <apiPackage>${default.package}.controller</apiPackage>
+                                        <modelPackage>${default.package}.model</modelPackage>
+                                        <configPackage>${default.package}.configuration</configPackage>
+                                        <invokerPackage>${default.package}</invokerPackage>
+                                        <dateLibrary>java8</dateLibrary>
+                                        <delegatePattern>false</delegatePattern>
+                                        <interfaceOnly>false</interfaceOnly>
+                                        <useTags>true</useTags>
+                                        <hideGenerationTimestamp>true</hideGenerationTimestamp>
+                                    </configOptions>
                                 </configuration>
                             </execution>
                         </executions>

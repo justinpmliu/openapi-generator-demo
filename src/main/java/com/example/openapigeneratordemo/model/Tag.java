@@ -8,7 +8,6 @@ import java.util.Objects;
 /**
  * Tag
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2020-12-23T12:40:00.255+08:00[Asia/Shanghai]")
 
 public class Tag   {
   @JsonProperty("id")
